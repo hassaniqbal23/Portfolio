@@ -1,6 +1,8 @@
+import Link from "next/link";
+import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextgGenerateEffect";
-
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { FaLocationArrow } from "react-icons/fa";
 function Hero() {
   return (
     <div className="pb-20 pt-36">
@@ -28,8 +30,20 @@ function Hero() {
           </h2>
           <TextGenerateEffect
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-            words="Transformaing Concepts into seamless Experiences"
+            words="Transforming Concepts into Seamless User Experiences"
+            filter={false}
+            duration={0}
           />
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi! I’m Hassan, a Next.js Developer based in Croatia.
+          </p>
+          <Link href={"#about"}>
+            <MagicButton
+              title={"show my work"}
+              icon={<FaLocationArrow />}
+              position={"right"}
+            />
+          </Link>
         </div>
       </div>
     </div>
